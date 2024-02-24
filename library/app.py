@@ -1,6 +1,7 @@
 import os
 from library.utils.helpers.visualizer import CLITable
 from library.object_models.book import Book
+from library.logger import log_info
 
 
 class Library:
@@ -20,9 +21,9 @@ class Library:
 
     def list_books(self) -> list:
         self.file.seek(0)
-        return [(Book(*line.strip().splitlines()) for line in self.file.readlines())]
+        return [(Book(*line.strip().split(",")) for line in self.file.readlines())]
 
-    
+    @log_info
     def add_book(self, book: Book):
         if not book.is_valid():
             print("(X) -> Invalid book. Please try again with valid details.")
@@ -39,9 +40,9 @@ class Library:
     With stick to the project prerequisites.
     """
 
-    
+    @log_info
     def remove_book(self, title):
-        before_file_stats = self.compare_size(self.file.name)
+        before_file_stats = self.compare_file_size(self.file.name)
 
         updated_books = [(book for book in self.list_books()[0] if book.title != title)]
         self.confirm(updated_books)
@@ -56,7 +57,6 @@ class Library:
 
     """ This method cencores the author from the file. It takes author as an argument. But I did not finalize the method. Little joke."""
 
-   
     def cencore_author(self, author):
         while True:
             is_sure = input("Are you sure? (y/n): ")
@@ -69,7 +69,6 @@ class Library:
     """ This method removes the books from the file by release date. It takes release date as an argument. 
         But I did not implemented to the main function. I just wanted to show the method."""
 
-   
     def remove_books_by_release_date(self, release_date):
         updated_books = [
             (book for book in self.list_books()[0] if book.release_date != release_date)
