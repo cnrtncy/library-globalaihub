@@ -15,21 +15,8 @@ I tried to stick with the project prerequisites as much as I can. I forced mysel
 Install my-project with npm
 
 ```bash
-  git clone https://projecturl
-  cd my-project
+  pip install cnrtncy-library-globalaihub
 ```
-
-Create virtual environment:
-```bash
-    python -m venv venv
-    source venv/bin/activate
-```
-
-Install requirements:
-```bash
-    pip install -r requirements.txt
-```
-
 
     
 ## Usage/Examples
