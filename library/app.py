@@ -1,5 +1,5 @@
 import os
-from library.utils.helpers.visualizer import CLITable
+from library.utils.visualizer import CLITable
 from library.object_models.book import Book
 from library.logger import log_info
 

@@ -1,7 +1,7 @@
 import argparse
 import os
 from library.object_models.book import Book
-from library.utils.helpers.dummy import DummyData
+from library.utils.dummy import DummyData
 import library.app as app
 from time import perf_counter
 
