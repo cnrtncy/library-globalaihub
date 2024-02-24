@@ -12,7 +12,7 @@ I tried to stick with the project prerequisites as much as I can. I forced mysel
 
 ## Installation
 
-Install my-project with npm
+Install my-project with
 
 ```bash
   pip install cnrtncy-library-globalaihub
