@@ -15,7 +15,7 @@ I tried to stick with the project prerequisites as much as I can. I forced mysel
 Install my-project with
 
 ```bash
-  pip install cnrtncy-library-globalaihub
+  pip install cnrtncy-library-globalaihub==0.0.2
 ```
 
     
